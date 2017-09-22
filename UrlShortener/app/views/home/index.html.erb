@@ -1,0 +1,29 @@
+<h3>Make own shortened url</h3>
+<div id="generated_url"></div>
+
+<div id="search-div">
+  <%= form_tag("home/index", method: "post", remote: true) do %>
+    <label for="fname">Enter URL</label>
+    <input type="text" id="search_name" name="search_name" placeholder="Your URL.." required = 'required'>
+
+    <input id="search-submit" type="submit" value="SHORTEN">
+  <% end %>
+</div>
+
+<% if @url_links.length !=0  %>
+  <h2>100 Most visited URL</h2>
+  <table id="most-visited-table">
+    <tr>
+      <th>Visited</th>
+      <th>Orginal URL</th>
+      <th>Generated URl</th>
+    </tr>
+    <% @url_links.each do |url_link| %>
+      <tr>
+        <td><%= url_link.hit_count %></td>
+        <td><%= url_link.orginal_url %></td>
+        <td><%= request.base_url + '/' + url_link.generated_url %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

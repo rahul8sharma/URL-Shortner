@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  orginal_url: MyText
+  generated_url: MyText
+  hit_count: 
+
+two:
+  orginal_url: MyText
+  generated_url: MyText
+  hit_count: 

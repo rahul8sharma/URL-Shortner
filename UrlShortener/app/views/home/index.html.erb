@@ -4,7 +4,7 @@
 <div id="search-div">
   <%= form_tag("home/index", method: "post", remote: true) do %>
     <label for="fname">Enter URL</label>
-    <input type="text" id="search_name" name="search_name" placeholder="Your URL.." required = 'required'>
+    <input type="text" id="search_orginal_url" name="search_orginal_url" placeholder="Your URL.." required = 'required'>
 
     <input id="search-submit" type="submit" value="SHORTEN">
   <% end %>
@@ -16,7 +16,7 @@
     <tr>
       <th>Visited</th>
       <th>Orginal URL</th>
-      <th>Generated URl</th>
+      <th>Generated URL</th>
     </tr>
     <% @url_links.each do |url_link| %>
       <tr>

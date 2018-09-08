@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20170922095804) do
   create_table "url_links", force: :cascade do |t|
     t.text     "orginal_url"
     t.text     "generated_url"
-    t.integer  "hit_count"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "hit_count",     default: 0
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end

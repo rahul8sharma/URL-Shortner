@@ -1,4 +1,4 @@
-$('#generated_url').text("Shrtern URL: <%= @generated_url %>").show();
-<% if @is_new_url %>
+$('#generated_url').text("Shrtern URL: <%= request.base_url + '/' + @url_link.generated_url %>").show();
+<% if @url_link.present? %>
   $('#most-visited-table tr:last').after("<tr><td><%= @url_link.hit_count %></td><td><%= @url_link.orginal_url %></td><td><%= request.base_url + '/' + @url_link.generated_url %></td> </tr>");
 <% end %>

@@ -3,7 +3,7 @@ class CreateUrlLinks < ActiveRecord::Migration
     create_table :url_links do |t|
       t.text :orginal_url
       t.text :generated_url
-      t.integer :hit_count
+      t.integer :hit_count, default: 0
 
       t.timestamps null: false
     end
